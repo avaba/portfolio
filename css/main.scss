@@ -4,9 +4,14 @@
 // colors
 $bgDark: #2A2A2A;
 $bgGrey: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+$bgBox: #2C2C2C;
 $orange: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
 $blue: #00C4F0;
 $white: #E4E4E4;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -19,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 
@@ -133,5 +138,109 @@ a {
 
     &__image {
         margin-top: auto;
+    }
+}
+
+.about {
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    padding: 113px 0;
+}
+
+.scills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 185px;
+
+    &__item {
+        width: calc(100% / 5);
+        height: 270px;
+        background: $bgDark;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+        border-radius: 29px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        max-width: 145px;
+        margin-top: auto;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 24px;
+        color: #E4E4E4;
+        margin-top: auto;
+        padding-bottom: 50px;
+    }
+}
+
+.aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 160px;
+    z-index: 10;
+
+    &__body {
+        position: relative;
+        background: $bgBox;
+        border-radius: 14px;
+        padding: 51px 53px;
+        width: 496px;
+        
+        &_title {
+            font-weight: 400;
+            font-size: 48px;
+            margin: 0 0 21px 0;
+            margin-top: -80px;
+        }
+
+        &_text {
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        &_top, &_center, &_bot {
+            position: absolute;
+            border: 29px solid $bgBox;
+            border-radius: 14px;
+        }
+
+        &_top {
+            top: -47px;
+            left: 0;
+            margin-left: 40px;
+            transform: translateX(-100%);
+        }
+
+        &_center {
+            top: 50%;
+            right: 0;
+            margin-right: 20px;
+            transform: translateY(-50%) translateX(100%);
+        }
+
+        &_bot {
+            bottom: -45px;
+            left: 0;
+            margin-left: 40px;
+            transform: translateX(-100%);
+        }
+
+        &_circles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-58%, -50%);
+            z-index: -1;
+            max-height: 1060px;
+            margin-top: 50px;
+        }
     }
 }
