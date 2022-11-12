@@ -244,3 +244,93 @@ a {
         }
     }
 }
+
+.worksSection {
+    padding: 100px 0 150px 0;
+    text-align: center;
+
+    &__title {
+        font-weight: 400;
+        font-size: 48px;
+        margin: 0 0 47px 0;
+    }
+}
+
+.works {
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: 0;
+        width: 60px;
+        height: 60px;
+        background: $orange;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            width: 36px;
+            height: 36px;
+            display: block;
+            background-size: cover;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+        margin-left: -100px;
+
+        &::before {
+            background-image: url(../image/arrow-left.svg);
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        margin-right: -100px;
+
+        &::before {
+            background-image: url(../image/arrow-right.svg);
+        }
+    }
+    
+    &__slide {
+        background: $bgGrey;
+        border-radius: 30px;
+        padding: 50px;
+    }
+
+    &__item {
+        display: flex;
+
+        &_img {
+            margin-right: 40px;
+            width: 493px;
+            height: 500px;
+            object-fit: contain;
+            border-radius: 30px;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 24px;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+        }
+    }
+}
